@@ -1,4 +1,5 @@
 import 'package:animations/animations/implicit_animations.dart';
+import 'package:animations/animations/tween_build_animations.dart';
 import 'package:flutter/material.dart';
 
 class NavDrawer extends StatelessWidget {
@@ -35,6 +36,20 @@ class NavDrawer extends StatelessWidget {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => const ImplicitAnimationsDemo(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.five_mp_outlined,
+              color: Colors.blue.shade800,
+            ),
+            title: const Text('Tween Builder Animations'),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const TweenAnimation(),
                 ),
               );
             },
